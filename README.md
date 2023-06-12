@@ -4,8 +4,8 @@
 
 ### Database of adoptable kitties
 ### Kitty = name, breed, age, gender, color, traumas, declawed
-### Drivers = name, driver_license, location
-### parents = name, phone_num, address, credit_card, username, pw, SSN
+### Drivers = name, driver_license, city
+### Hooman = name, phone_num, address, credit_card, username, pw, SSN, email, [Kitty]
 
 # graphQL
 query = viewKitty, viewDrivers, viewClients   
