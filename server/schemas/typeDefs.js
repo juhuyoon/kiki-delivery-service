@@ -16,6 +16,9 @@ const typeDefs = gql`
         viewKitties: [Kitty]
     }
 
+    type Mutation {
+        addKitty(name: String!, breed: String!, age: Int!, gender: String!, color: String!, trauma: String, declawed: Boolean!): Kitty
+    }
 `;
 
 module.exports = typeDefs;

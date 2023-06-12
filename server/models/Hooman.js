@@ -54,6 +54,6 @@ const hoomanSchema = new Schema({
     }
 });
 
-const Hooman = model("Hooman", hoomanSchema);
+const Hooman = model("Hooman", hoomanSchema, "Hooman");
 
 module.exports = Hooman;

@@ -34,5 +34,5 @@ const kittySchema = new Schema({
     }
 });
 
-const Kitty = mongoose.model("Kitty", kittySchema);
+const Kitty = mongoose.model("Kitty", kittySchema, "Kitty");
 module.exports = Kitty;

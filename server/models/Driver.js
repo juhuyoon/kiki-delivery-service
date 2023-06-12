@@ -19,6 +19,6 @@ const driverSchema = new Schema({
     }
 });
 
-const Driver = model("Driver", driverSchema);
+const Driver = model("Driver", driverSchema, "Driver");
 
 module.exports = Driver;

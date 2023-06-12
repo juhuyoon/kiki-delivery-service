@@ -7,9 +7,13 @@ const resolvers = {
         }
     }, 
 
-    // Mutation: {
+    Mutation: {
+        addKitty: async (_, args) => {
+            const kitty = await Kitty.create(args);
 
-    // }
+            return kitty;
+        }
+    }
 };
 
 module.exports = resolvers;
