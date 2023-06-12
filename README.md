@@ -5,13 +5,13 @@
 ### Database of adoptable kitties
 ### Kitty = name, breed, age, gender, color, traumas, declawed
 ### Drivers = name, driver_license, location
-### Clients = name, phone_num, address, credit_card, username, pw, SSN
+### parents = name, phone_num, address, credit_card, username, pw, SSN
 
 # graphQL
 query = viewKitty, viewDrivers, viewClients   
 mutation = addKitty, deleteKitty, updateKitty,   
            addDriver, deleteDriver, updateDriver   
-clients = addClients, deleteClient, updateClient   
+parents = addParents, deleteParet, updateParent  
 
 
 # Backend
