@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 // Apollo-server-express (deprecates in Oct 2023 to @apollo/server. Keep in mind!)
 const { ApolloServer } = require('apollo-server-express');
 
@@ -20,6 +21,11 @@ const app = express();
 
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+
+if(process.env.NODE_ENV === 'production') {
+    // To READ the react content when it is deployed in the internet
+    app.use(express.static(path.join(__dirname, '../client/build')));
+}
 
 
 // Start Apolloserver, then connect to express, connect to mongoose, THEN start the app
