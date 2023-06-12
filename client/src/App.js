@@ -1,17 +1,22 @@
 import './App.css';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client';
 import Adoption from './components/Adoption';
+import KittyForm from './components/KittyForm';
+
+// const link = new HttpLink({
+//   uri: "http://localhost:3001/graphql"
+// });
 
 const client = new ApolloClient({
-  uri: '/graphql',
+  uri: 'http://localhost:3001/graphql',
   cache: new InMemoryCache()
 })
 
 function App() {
   return (
     <ApolloProvider client={client}>
-      <div className="text-3xl font-bold underline">
-        Hewwo! OuO!
+      <div className="container mx-auto">
+        <KittyForm />
         <Adoption />
       </div>
     </ApolloProvider>
